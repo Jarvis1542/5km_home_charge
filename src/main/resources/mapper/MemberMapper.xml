@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivekm_home_charge.charge.mapper.MemberMapper">
+    <select id="getMembers" resultType="com.fivekm_home_charge.charge.web.dto.MemberDto">
+        select * from MEMBER
+     </select>
+
+    <insert id="insertMembers">
+        insert into MEMBER(ID, PASSWORD, EMAIL, phone, NAME, regDate) values(
+        #{id},
+        #{password},
+        #{email},
+        #{phone},
+        #{name},
+        sysdate)
+    </insert>
+
+    <select id="getMember" resultType="com.fivekm_home_charge.charge.web.dto.MemberDto">
+        select * from MEMBER
+        where ID = #{id, jdbcType=VARCHAR}
+        and password = #{password, jdbcType=VARCHAR}
+    </select>
+
+    <select id="checkId" resultType="com.fivekm_home_charge.charge.web.dto.MemberDto">
+        select * from MEMBER
+        where id = #{id}
+    </select>
+
+    <select id="login" resultType="com.fivekm_home_charge.charge.web.dto.LoginDTO">
+        select id, password
+        from view_member
+        where id = #{id}
+        and password = #{password}
+    </select>
+</mapper>

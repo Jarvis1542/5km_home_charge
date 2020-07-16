@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivekm_home_charge.charge.mapper.ChargingMapper">
+    <insert id="insertChargingStation">
+        insert into CS(chargeName, operation, chargeSpeed, postcode, roadAddress, detailAddress, extraAddress, image1 ,image2, cable, chargeType) values(
+        #{chargeName,jdbcType=VARCHAR},
+        #{operation,jdbcType=VARCHAR},
+        #{chargeSpeed,jdbcType=VARCHAR},
+        #{postcode,jdbcType=VARCHAR},
+        #{roadAddress,jdbcType=VARCHAR},
+        #{detailAddress,jdbcType=VARCHAR},
+        #{extraAddress,jdbcType=VARCHAR},
+        #{image1,jdbcType=VARCHAR},
+        #{image2,jdbcType=VARCHAR},
+        #{cable,jdbcType=VARCHAR},
+        #{chargeType,jdbcType=VARCHAR}
+        )
+    </insert>
+</mapper>

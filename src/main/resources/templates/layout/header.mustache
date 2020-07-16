@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Finloans</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/gijgo.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slicknav.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/kakaomap.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- header-start -->
+<header>
+    <div class="header-area ">
+        <div id="sticky-header" class="main-header-area">
+            <div class="container-fluid ">
+                <div class="header_bottom_border">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="/img/logo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <!-- Home 대신 로고 사용
+                                        <li><a href="/">Home</a></li>
+                                        -->
+                                        <!-- 메뉴 : SCS -->
+                                        <li><a href="#">SCS<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="/chargingStation/chargingRegister">충전소 등록</a></li>
+                                                <li><a href="/chargingStation/chargingSearch">충전소 찾기</a></li>
+                                                <li><a href="/chargingStation/chargingHistory">이용 내역</a></li>
+                                                <li><a href="/admin/chargingRequest">충전소 요청</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 메뉴 : 해피 파킹 -->
+                                        <li><a href="#">Happy Parking<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="/happyParking/happyParkingRegister">주차장 등록</a></li>
+                                                <li><a href="/happyParking/happyParkingSearch">주차장 찾기</a></li>
+                                                <li><a href="/happyParking/happyParkingHistory">이용 내역</a></li>
+                                                <li><a href="/admin/happyParkingRequest">주차장 요청</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 메뉴 : 와치 비히클 -->
+                                        <li><a href="/watchVehicle">Watch Vehicle</a></li>
+
+                                        <!-- 메뉴 : 부가 서비스 -->
+                                        <li><a href="#">부가서비스<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="/otherService/parkingMap">Parking Map</a></li>
+                                                <li><a href="/otherService/EZCharging">Ez Charging</a></li>
+                                                <li><a href="/otherService/QnA">QnA</a></li>
+                                                <li><a href="/otherService/FAQ">FAQ</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- 메뉴 : 마이 페이지 -->
+                                        <li><a href="#">마이페이지<i class="ti-angle-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="/myPage/memberEdit">정보 수정</a></li>
+                                                <li><a href="/myPage/bookmark">즐겨 찾기</a></li>
+                                                <li><a href="/chargingStation/chargingRegister">충전소 등록</a></li>
+                                                <li><a href="/happyParking/happyParkingRegister">주차장 등록</a></li>
+                                                <li><a href="/myPage/history">이용 내역</a></li>
+                                                <li><a href="/admin/memberList">회원 목록</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+                            <div class="Appointment">
+                                <!-- 연락 아이콘 + 전화 번호
+                                <div class="phone_num d-none d-xl-block">
+                                    <a href="#"> <i class="fa fa-phone"></i> +10 673 567 367</a>
+                                </div>
+                                -->
+                                <!-- 가입 버튼 -->
+                                {{^member}}
+                                <div class="d-none d-lg-block">
+                                    <a class="boxed-btn4" href="/index/join">회원 가입</a>
+                                </div>
+                                <div class="d-none d-lg-block gj-margin-left-10">
+                                    <a class="boxed-btn4" href="/index/login">로그인</a>
+                                </div>
+                                {{/member}}
+
+                                {{#member}}
+                                    <h2>{{member.id}}님 안녕하세요?</h2>
+                                    <div class="d-none d-lg-block">
+                                        <a class="boxed-btn4" href="/index/join">ㅎㅇ</a>
+                                    </div>
+                                    <div class="d-none d-lg-block gj-margin-left-10">
+                                        <a class="boxed-btn4" href="/index/login">로그아웃</a>
+                                    </div>
+                                {{/member}}
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-end -->

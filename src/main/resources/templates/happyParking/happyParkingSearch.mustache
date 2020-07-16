@@ -1,0 +1,53 @@
+{{>layout/header}} <!-- >는 현재 머스테치 파일을 기준으로 다른 파일을 가져옴. -->
+
+<!-- bradcam_area  -->
+<div class="bradcam_area hp_bg_05">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text">
+                    <h3>주차장 찾기</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+<!-- ================ contact section start ================= -->
+<section class="contact-section section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title text-center mb-90">
+                    <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"></span>
+                    <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">Search MAP</h3>
+                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">주변의 가까운 주차장을 검색해보세요!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="map_wrap">
+                    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+                    <div id="menu_wrap" class="bg_white">
+                        <div class="option">
+                            <div>
+                                <form onsubmit="searchPlaces(); return false;">
+                                    키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15">
+                                    <button type="submit">검색하기</button>
+                                </form>
+                            </div>
+                        </div>
+                        <hr>
+                        <ul id="placesList"></ul>
+                        <div id="pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================ contact section end ================= -->
+
+{{>layout/footer}} <!-- >는 현재 머스테치 파일을 기준으로 다른 파일을 가져옴. --></html>

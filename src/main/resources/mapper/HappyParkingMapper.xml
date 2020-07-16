@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivekm_home_charge.charge.mapper.HappyParkingMapper">
+    <insert id="insertHappyParking">
+        insert into PARKING (parkingIdx, PARKINGNAME, PARKINGTYPE, MIN30FEE, ADDMIN10FEE, PLACE,
+        sample4_postcode, sample4_roadAddress, sample4_jibunAddress, sample4_detailAddress,
+        sample4_extraAddress, dayTime, weeTime, holTime, aptMap, parkingPic, id, PARKINGDATE) values(
+        PARKING_SEQ.nextval,
+        #{parkingName,jdbcType=VARCHAR},
+        #{parkingType,jdbcType=VARCHAR},
+        #{min30Fee,jdbcType=INTEGER},
+        #{addMin10Fee,jdbcType=INTEGER},
+        #{place,jdbcType=INTEGER},
+        #{sample4_postcode,jdbcType=VARCHAR},
+        #{sample4_roadAddress,jdbcType=VARCHAR},
+        #{sample4_jibunAddress,jdbcType=VARCHAR},
+        #{sample4_detailAddress,jdbcType=VARCHAR},
+        #{sample4_extraAddress,jdbcType=VARCHAR},
+        #{dayTime,jdbcType=VARCHAR},
+        #{weeTime,jdbcType=VARCHAR},
+        #{holTime,jdbcType=VARCHAR},
+        #{aptMap,jdbcType=VARCHAR},
+        #{parkingPic,jdbcType=VARCHAR},
+        #{id,jdbcType=VARCHAR},
+        sysdate)
+    </insert>
+
+    <select id="requestHappyParking" resultType="com.fivekm_home_charge.charge.web.dto.HappyParkingRequestLDto">
+        select PARKINGNAME, parkingType, min30Fee, addMin10Fee, place, sample4_postcode,
+        sample4_roadAddress, sample4_jibunAddress, sample4_detailAddress,
+        sample4_extraAddress, dayTime, weeTime, holTime, aptMap, parkingPic
+        from PARKING
+        where PARKINGNAME = #{parkingName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="happyParkingRequestList" resultType="com.fivekm_home_charge.charge.web.dto.HappyParkingRequestListDto">
+        select ID, PARKINGNAME, PARKINGTYPE, PLACE,
+        SAMPLE4_ROADADDRESS, SAMPLE4_DETAILADDRESS,
+        SAMPLE4_EXTRAADDRESS, PARKINGDATE
+        from PARKING
+    </select>
+    
+    <select id="happyParkingBook1" resultType="com.fivekm_home_charge.charge.web.dto.HappyParkingBookDto1">
+        select PARKINGPIC, PARKINGNAME, DAYTIME, WEETIME, HOLTIME, place
+        from PARKING
+    </select>
+</mapper>
