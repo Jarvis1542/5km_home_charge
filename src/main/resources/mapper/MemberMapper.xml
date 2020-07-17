@@ -21,8 +21,9 @@
         and password = #{password, jdbcType=VARCHAR}
     </select>
 
-    <select id="checkId" resultType="com.fivekm_home_charge.charge.web.dto.MemberDto">
-        select * from MEMBER
+    <select id="checkId" resultType="int">
+        select count(*)
+        from member
         where id = #{id}
     </select>
 
