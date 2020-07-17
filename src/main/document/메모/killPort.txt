@@ -1,0 +1,7 @@
+/* CMD 명령어에서 */
+
+netstat -nao
+
+/* Ctrl + F로 포트번호 사용중인 PID 검색 */
+
+taskill -pid {포트번호} /f
