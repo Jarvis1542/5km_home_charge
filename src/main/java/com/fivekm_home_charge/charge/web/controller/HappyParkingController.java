@@ -26,6 +26,7 @@ public class HappyParkingController {
     public String main(HttpSession httpSession, @PathVariable String itemid,
                        HttpServletRequest request,
                        HttpServletResponse response, Model model) throws Exception {
+        model.addAttribute("member",httpSession.getAttribute("user"));
         System.out.println("itemid : " + itemid);
         if(itemid.equals("happyParkingRegister")) {
             HttpSession session = request.getSession();
@@ -39,7 +40,8 @@ public class HappyParkingController {
     }
 
     @GetMapping("/happyParking/requestHappyParking/{parkingName}")
-    public String requestHappyParking(@PathVariable String parkingName, Model model) throws Exception{
+    public String requestHappyParking(@PathVariable String parkingName, HttpSession httpSession, Model model) throws Exception{
+        model.addAttribute("member",httpSession.getAttribute("user"));
         model.addAttribute("request", happyParkingService.requestHappyParking(parkingName));
         return "/admin/happyParkingRequest";
     }

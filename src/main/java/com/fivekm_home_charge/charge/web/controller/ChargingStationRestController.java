@@ -3,6 +3,7 @@ package com.fivekm_home_charge.charge.web.controller;
 import com.fivekm_home_charge.charge.service.ChargingStationService;
 import com.fivekm_home_charge.charge.web.dto.ChargingStationSaveDto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,10 +21,10 @@ public class ChargingStationRestController {
     public static String uploadpath = "D:\\uploadTest\\";
 
     @PostMapping("/scs/rest/save")
-    public void insertChargingStation(ChargingStationSaveDto chargingStationSaveDto, HttpSession httpSession, MultipartFile file1, MultipartFile file2)
+    public void insertChargingStation(ChargingStationSaveDto chargingStationSaveDto, HttpSession httpSession, Model model, MultipartFile file1, MultipartFile file2)
             throws Exception {
         httpSession.getAttribute("userId");
-
+        model.addAttribute("member",httpSession.getAttribute("user"));
         try{
             file1.transferTo(new File(uploadpath + file1.getOriginalFilename()));
             file2.transferTo(new File(uploadpath + file2.getOriginalFilename()));

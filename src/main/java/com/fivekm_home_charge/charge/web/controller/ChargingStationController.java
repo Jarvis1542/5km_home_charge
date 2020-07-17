@@ -1,6 +1,7 @@
 package com.fivekm_home_charge.charge.web.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -14,7 +15,8 @@ public class ChargingStationController {
 
     //@GetMapping("/chargingStation/{itemid}")
     @RequestMapping(value="/chargingStation/{itemid}", method = RequestMethod.GET)
-    public String main(HttpSession httpSession, @PathVariable String itemid){
+    public String main(Model model, HttpSession httpSession, @PathVariable String itemid){
+        model.addAttribute("member",httpSession.getAttribute("user"));
         System.out.println(itemid);
         System.out.println("페이지 접속 시도 : SCS 등록("+itemid+"");
         System.out.println("현재세션유저아이디 : " + httpSession.getAttribute("userId"));
@@ -22,7 +24,8 @@ public class ChargingStationController {
     }
 
     @GetMapping("/chargingStation")
-    public String chargingStation() {
+    public String chargingStation(Model model, HttpSession httpSession)
+    {   model.addAttribute("member",httpSession.getAttribute("user"));
         return "/chargingStation/chargingStation";
     }
 /*
