@@ -12,50 +12,28 @@ import java.io.IOException;
 @Controller
 public class ChargingStationController {
 
-
-    //@GetMapping("/chargingStation/{itemid}")
-    @RequestMapping(value="/chargingStation/{itemid}", method = RequestMethod.GET)
-    public String main(Model model, HttpSession httpSession, @PathVariable String itemid){
-        model.addAttribute("member",httpSession.getAttribute("user"));
-        System.out.println(itemid);
-        System.out.println("페이지 접속 시도 : SCS 등록("+itemid+"");
-        System.out.println("현재세션유저아이디 : " + httpSession.getAttribute("userId"));
-        return "/chargingStation/" + itemid;
-    }
-
-    @GetMapping("/chargingStation")
-    public String chargingStation(Model model, HttpSession httpSession)
-    {   model.addAttribute("member",httpSession.getAttribute("user"));
-        return "/chargingStation/chargingStation";
-    }
-/*
-    @GetMapping("/chargingStation/index")
-    public String chargingStationIndex() {
-        return "/chargingStation/index";
-    }
+//    @RequestMapping(value="/chargingStation/{itemid}", method = RequestMethod.GET)
+//    public String main(Model model, HttpSession httpSession, @PathVariable String itemid){
+//        model.addAttribute("member",httpSession.getAttribute("user"));
+//        System.out.println(itemid);
+//        System.out.println("페이지 접속 시도 : chargingStation/" + itemid);
+//        System.out.println("현재세션유저아이디 : " + httpSession.getAttribute("userId"));
+//        return "/chargingStation/" + itemid;
+//    }
 
     @GetMapping("/chargingStation/chargingRegister")
-    public String chargingRegister(){
-        System.out.println("페이지 접속 시도 : SCS 등록(chargingRegister)");
+    public String chargingRegister(Model model, HttpSession httpSession){
         return "/chargingStation/chargingRegister";
     }
 
     @GetMapping("/chargingStation/chargingSearch")
-    public String chargingSearch(){
-        System.out.println("페이지 접속 시도 : SCS 찾기(chargingSearch)");
+    public String chargingSearch(Model model, HttpSession httpSession){
         return "/chargingStation/chargingSearch";
     }
 
     @GetMapping("/chargingStation/chargingHistory")
-    public String chargingHistory(){
-        System.out.println("페이지 접속 시도 : SCS 내역(chargingHistory)");
+    public String chargingHistory(Model model, HttpSession httpSession){
         return "/chargingStation/chargingHistory";
     }
 
-    @GetMapping("/chargingStation/upload")
-    public String upload(){
-        System.out.println("페이지 접속 시도 : SCS 등록(upload)");
-        return "/chargingStation/upload";
-    }
-*/
 }

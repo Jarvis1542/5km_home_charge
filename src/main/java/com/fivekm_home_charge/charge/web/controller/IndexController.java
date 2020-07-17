@@ -50,8 +50,6 @@ public class IndexController {
         return "/index/index";
     }
 
-
-
 /*
     @GetMapping("/index/join")
     public String join() {
