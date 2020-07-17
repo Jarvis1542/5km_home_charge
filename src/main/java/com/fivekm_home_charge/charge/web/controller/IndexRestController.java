@@ -1,6 +1,7 @@
 package com.fivekm_home_charge.charge.web.controller;
 
 import com.fivekm_home_charge.charge.service.MemberService;
+import com.fivekm_home_charge.charge.web.dto.LoginCheckDto;
 import com.fivekm_home_charge.charge.web.dto.LoginDTO;
 import com.fivekm_home_charge.charge.web.dto.MemberDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +22,9 @@ public class IndexRestController {
     }
 
     @PostMapping("/rest/checkId")
-    public void checkId(String id){
-        System.out.println("CON");
-        memberService.checkId(id);
+    public int checkId(LoginCheckDto loginCheckDto){
+        System.out.println("아이디 중복체크: "+loginCheckDto.toString());
+        return memberService.checkId(loginCheckDto);
     }
 
     @PostMapping("/rest/login")

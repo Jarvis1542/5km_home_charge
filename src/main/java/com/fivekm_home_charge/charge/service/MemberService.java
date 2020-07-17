@@ -1,6 +1,7 @@
 package com.fivekm_home_charge.charge.service;
 
 import com.fivekm_home_charge.charge.mapper.MemberMapper;
+import com.fivekm_home_charge.charge.web.dto.LoginCheckDto;
 import com.fivekm_home_charge.charge.web.dto.LoginDTO;
 import com.fivekm_home_charge.charge.web.dto.MemberDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +31,8 @@ public class MemberService {
         return memberMapper.getMember(id,password);
     }
 
-    public void checkId(String id) {
-        System.out.println("SER");
-        memberMapper.checkId(id);
+    public int checkId(LoginCheckDto loginCheckDto) {
+        return memberMapper.checkId(loginCheckDto);
     }
 
     public LoginDTO login(LoginDTO loginDTO) throws Exception{
