@@ -43,6 +43,11 @@
     margin-bottom:10px;
 }
 
+/* 모바일 메뉴에서는 보이되, 웹 메뉴에서는 표시하지 않기 위해 none 적용 */
+.header-area .main-header-area .main-menu ul li.login_none {
+    display: none;
+}
+
 .back_darkblue {
     position:absolute;
     z-index:5;

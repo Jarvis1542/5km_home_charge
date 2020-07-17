@@ -102,6 +102,16 @@
                                             </ul>
                                         </li>
 
+                                        <!--모바일 메뉴에서 로그인 및 가입 버튼, custom.css에서 login_none 참조-->
+                                        {{^member}}
+                                            <li class="login_none"><a href="/index/join">회원가입<i class="ti-angle-down"></i></a></li>
+                                            <li class="login_none"><a href="/index/login">로그인<i class="ti-angle-down"></i></a></li>
+                                        {{/member}}
+                                        {{#member}}
+                                            <li class="login_none"><a class="boxed-btn4" href="/myPage/memberEdit">"{{member.id}}"MyPage</a></li>
+                                            <li class="login_none"><a class="boxed-btn4" href="/logout">로그아웃</a></li>
+                                        {{/member}}
+
                                     </ul>
                                 </nav>
                             </div>
@@ -115,10 +125,10 @@
                                 -->
                                 <!-- 가입 버튼 -->
                                 {{^member}}
-                                <div class="d-none d-lg-block">
+                                <div class="d-lg-block">
                                     <a class="boxed-btn4" href="/index/join">회원 가입</a>
                                 </div>
-                                <div class="d-none d-lg-block gj-margin-left-10">
+                                <div class="d-lg-block gj-margin-left-10">
                                     <a class="boxed-btn4" href="/index/login">로그인</a>
                                 </div>
                                 {{/member}}
