@@ -28,10 +28,15 @@ public class IndexRestController {
     }
 
     @PostMapping("/rest/login")
-    public void login(LoginDTO loginDTO, Model model, HttpSession httpSession) throws Exception{
+    public Object login(LoginDTO loginDTO, Model model, HttpSession httpSession) throws Exception{
         httpSession.setAttribute("user", memberService.login(loginDTO));
         model.addAttribute("member", httpSession.getAttribute("user"));
         System.out.println("세션에 대한 정보"+ httpSession.getAttribute("user"));
-       
+        if(httpSession.getAttribute("user") == null) {
+            return "로그인 실패";
+        } else {
+            return "로그인 성공";
+        }
+
     }
 }

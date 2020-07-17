@@ -51,9 +51,17 @@ $('#loginBtn').click(function () {
         type: 'post',
         url: '/rest/login',
         data: data
-    }).done(function(){
-        alert("로그인 완료");
-        window.location.href="/";
+    }).done(function(msg){
+        console.log(msg);
+        if(msg == "로그인 성공") {
+            alert("로그인 완료");
+            window.location.href="/";
+        } else {
+            alert("아이디와 비밀번호를 확인해주세요");
+            location.reload();
+        }
+
+
     }).fail(function (error) {
         alert(error);
     });
