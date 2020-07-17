@@ -29,18 +29,19 @@ public class IndexController {
 //        list.add(m3);
     }
 
-    @RequestMapping(value="/{itemid}", method = RequestMethod.GET)
+    @RequestMapping("index/index")
     public String main(HttpSession httpSession, @PathVariable String itemid){
-        System.out.println("index item id : " + itemid);
         System.out.println("현재세션유저아이디 : " + httpSession.getAttribute("user"));
         return "/" + itemid;
     }
     @RequestMapping(value="/index/{itemid}", method = RequestMethod.GET)
-    public String index_main(HttpSession httpSession, @PathVariable String itemid){
+    public String index_main(Model model, HttpSession httpSession, @PathVariable String itemid){
         System.out.println("index item id : " + itemid);
         System.out.println("현재세션유저아이디 : " + httpSession.getAttribute("user"));
+        model.addAttribute("member",httpSession.getAttribute("user"));
         return "/index/" + itemid;
     }
+
     @GetMapping({"/"})
     public String index(Model model, HttpSession httpSession) {
         httpSession.getAttribute("user");
@@ -50,17 +51,13 @@ public class IndexController {
     }
 
 
-    /*
+
+/*
     @GetMapping("/index/join")
     public String join() {
         return "/index/join";
     }
-
-    @GetMapping("/index/login")
-    public String login(){
-        return "/index/login";
-    }
-    */
+*/
 
     @GetMapping("/index/login")
     public String login(HttpSession httpSession, Model model) throws Exception{

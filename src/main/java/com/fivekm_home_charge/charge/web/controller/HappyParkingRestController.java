@@ -4,6 +4,7 @@ import com.fivekm_home_charge.charge.service.HappyParkingService;
 import com.fivekm_home_charge.charge.web.dto.HappyParkingDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletResponse;
@@ -17,9 +18,10 @@ public class HappyParkingRestController {
 
     @PostMapping("/rest/happyParkingRegister")
     public String insertHappyParking(HappyParkingDto happyParkingDto, HttpSession httpSession,
-                                     HttpServletResponse response) throws Exception{
+                                     HttpServletResponse response, Model model) throws Exception{
         System.out.println("현제세션아이디 : " + httpSession.getAttribute("userId"));
         happyParkingDto.toString();
+        model.addAttribute("member",httpSession.getAttribute("user"));
         happyParkingService.insertHappyParking(happyParkingDto);
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
