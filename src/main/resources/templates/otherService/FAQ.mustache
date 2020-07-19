@@ -1,12 +1,12 @@
 {{>layout/header}} <!-- >는 현재 머스테치 파일을 기준으로 다른 파일을 가져옴. -->
 
 <!-- bradcam_area  -->
-<div class="bradcam_area bradcam_bg_3">
+<div class="bradcam_area hp_bg_11">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="bradcam_text">
-                    <h3>FAQ Page</h3>
+                    <h3>FAQ</h3>
                 </div>
             </div>
         </div>
@@ -14,19 +14,78 @@
 </div>
 <!--/ bradcam_area  -->
 
-<!-- ================ contact section start ================= -->
-<section class="contact-section section_padding">
+<!-- accordion_area_start  -->
+<div class="accordion_area extra_padding">
     <div class="container">
-        <div class="d-none d-sm-block mb-5 pb-4">
-            <h1>happy parking page</h1>
-            <br>
-            <h2>주차장 등록하기</h2>
-            남는 공간이나 주차장이 있으신가요?<br>
-            공간과 주차장을 등록한 후 수입을 만들어보세요.<br>
-            <a href="/happyParking/happyParkingRegister" role="button">계속</a>
+        <div class="row justify-content-end">
+            <div class="col-lg-6">
+                <div class="faq_ask pl-68">
+                    <h3 class="wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">자주 묻는 질문</h3>
+                    <div id="accordion">
+                        <div class="card wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".3s">
+                            <div class="card-header" id="headingOnee">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOnee" aria-expanded="true" aria-controls="collapseOnee">
+                                        질문 1
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOnee" class="collapse show" aria-labelledby="headingOnee" data-parent="#accordion">
+                                <div class="card-body">
+                                    답변 1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".4s">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        질문 2
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    답변 2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".5s">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        질문 3
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    답변 3
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".6s">
+                            <div class="card-header" id="headingThree4">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree4" aria-expanded="false" aria-controls="collapseThree4">
+                                        질문 4
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree4" class="collapse" aria-labelledby="headingThree4" data-parent="#accordion" style="">
+                                <div class="card-body">
+                                    답변 4
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+</div>
+<!--/ accordion_area_end  -->
 
 
 {{>layout/footer}} <!-- >는 현재 머스테치 파일을 기준으로 다른 파일을 가져옴. -->
