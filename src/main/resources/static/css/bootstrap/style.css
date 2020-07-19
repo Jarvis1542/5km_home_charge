@@ -1355,12 +1355,12 @@ label {
 
 /* line 1, ../../Arafath/CL/December/234. Finance/HTML/scss/_slider.scss */
 .slider_bg_1 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url(../../img/banner/banner.png);
 }
 
 /* line 4, ../../Arafath/CL/December/234. Finance/HTML/scss/_slider.scss */
 .slider_bg_2 {
-  background-image: url(../img/banner/banner.png);
+  background-image: url(../../img/banner/banner.png);
 }
 
 /* line 7, ../../Arafath/CL/December/234. Finance/HTML/scss/_slider.scss */
@@ -2287,7 +2287,7 @@ label {
   top: 0;
   height: 100%;
   content: '';
-  background-image: url(../img/faq/faq.png);
+  background-image: url(../../img/faq/faq.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -3093,20 +3093,20 @@ p #amount {
 
 /* line 1, ../../Arafath/CL/December/234. Finance/HTML/scss/_bradcam.scss */
 .bradcam_bg_1 {
-  background-image: url(../img/banner/bradcam.png);
+  background-image: url(../../img/banner/bradcam.png);
 }
 
 /* line 4, ../../Arafath/CL/December/234. Finance/HTML/scss/_bradcam.scss */
 .bradcam_bg_2 {
-  background-image: url(../img/banner/bradcam2.png);
+  background-image: url(../../img/banner/bradcam2.png);
 }
 
 /* line 7, ../../Arafath/CL/December/234. Finance/HTML/scss/_bradcam.scss */
 .bradcam_bg_3 {
-  background-image: url(../img/banner/bradcam3.png);
+  background-image: url(../../img/banner/bradcam3.png);
 }
 .bradcam_bg_4 {
-  background-image: url(../img/banner/bradcam4.png);
+  background-image: url(../../img/banner/bradcam4.png);
 }
 
 /* line 10, ../../Arafath/CL/December/234. Finance/HTML/scss/_bradcam.scss */
@@ -3526,7 +3526,7 @@ p #amount {
 
 /* line 1, ../../Arafath/CL/December/234. Finance/HTML/scss/_loan.scss */
 .apply_loan {
-  background-image: url(../img/banner/loan.png);
+  background-image: url(../../img/banner/loan.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 137px 0;
@@ -4861,7 +4861,7 @@ h6 {
 
 /* line 798, ../../Arafath/CL/December/234. Finance/HTML/scss/_elements.scss */
 .primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+  background: url(../../img/elements/primary-check.png) no-repeat center center/cover;
   border: none;
 }
 
@@ -4903,7 +4903,7 @@ h6 {
 
 /* line 835, ../../Arafath/CL/December/234. Finance/HTML/scss/_elements.scss */
 .confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
+  background: url(../../img/elements/success-check.png) no-repeat center center/cover;
   border: none;
 }
 
@@ -4951,7 +4951,7 @@ h6 {
 
 /* line 876, ../../Arafath/CL/December/234. Finance/HTML/scss/_elements.scss */
 .disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+  background: url(../../img/elements/disabled-check.png) no-repeat center center/cover;
   border: none;
 }
 
@@ -4993,7 +4993,7 @@ h6 {
 
 /* line 913, ../../Arafath/CL/December/234. Finance/HTML/scss/_elements.scss */
 .primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+  background: url(../../img/elements/primary-radio.png) no-repeat center center/cover;
   border: none;
 }
 
@@ -5035,7 +5035,7 @@ h6 {
 
 /* line 950, ../../Arafath/CL/December/234. Finance/HTML/scss/_elements.scss */
 .confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+  background: url(../../img/elements/success-radio.png) no-repeat center center/cover;
   border: none;
 }
 
@@ -5083,7 +5083,7 @@ h6 {
 
 /* line 991, ../../Arafath/CL/December/234. Finance/HTML/scss/_elements.scss */
 .disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+  background: url(../../img/elements/disabled-radio.png) no-repeat center center/cover;
   border: none;
 }
 
