@@ -90,3 +90,9 @@
 .hp_bg_11 {
     background-image: url(../img/happyParking/HP11.jpg);
 }
+.google_login {
+    background-image: url(../img/googleLogin.png);
+}
+.naver_login {
+    background-image: url(../img/naverLogin.PNG);
+}
