@@ -1,0 +1,92 @@
+/* 배경 이미지 CSS */
+
+/* ERROR 페이지 배경화면 경로 */
+.bg_error01 {
+    background-image: url(../img/error/purple.png);
+}
+
+.scs_bg_00 {
+    background-image: url(../img/chargingStation/SCS00.jpg);
+}
+.scs_bg_01 {
+    background-image: url(../img/chargingStation/SCS01.jpg);
+}
+.scs_bg_02 {
+    background-image: url(../img/chargingStation/SCS02.jpg);
+}
+.scs_bg_03 {
+    background-image: url(../img/chargingStation/SCS03.jpg);
+}
+.scs_bg_04 {
+    background-image: url(../img/chargingStation/SCS04.jpeg);
+}
+.scs_bg_05 {
+    background-image: url(../img/chargingStation/SCS05.jpeg);
+}
+.scs_bg_06 {
+    background-image: url(../img/chargingStation/SCS06.jpg);
+}
+.scs_bg_07 {
+    background-image: url(../img/chargingStation/SCS07.jpg);
+}
+.scs_bg_08 {
+    background-image: url(../img/chargingStation/SCS08.jpg);
+}
+.scs_bg_09 {
+    background-image: url(../img/chargingStation/SCS09.jpg);
+}
+.scs_bg_10 {
+    background-image: url(../img/chargingStation/SCS10.jpg);
+}
+.scs_bg_11 {
+    background-image: url(../img/chargingStation/SCS11.jpg);
+}
+.scs_bg_12 {
+    background-image: url(../img/chargingStation/SCS12.jpg);
+}
+.scs_bg_13 {
+    background-image: url(../img/chargingStation/SCS13.jpg);
+}
+.scs_bg_14 {
+    background-image: url(../img/chargingStation/SCS14.jpg);
+}
+.scs_bg_15 {
+    background-image: url(../img/chargingStation/SCS15.jpg);
+}
+
+.hp_bg_00 {
+    background-image: url(../img/happyParking/HP00.jpg);
+}
+.hp_bg_01 {
+    background-image: url(../img/happyParking/HP01.jpg);
+}
+.hp_bg_02 {
+    background-image: url(../img/happyParking/HP02.jpg);
+}
+.hp_bg_03 {
+    background-image: url(../img/happyParking/HP03.jpg);
+}
+.hp_bg_04 {
+    background-image: url(../img/happyParking/HP04.jpg);
+}
+.hp_bg_05 {
+    background-image: url(../img/happyParking/HP05.jpg);
+}
+.hp_bg_06 {
+    background-image: url(../img/happyParking/HP06.png);
+}
+.hp_bg_07 {
+    background-image: url(../img/happyParking/HP07.jpg);
+}
+.hp_bg_08 {
+    background-image: url(../img/happyParking/HP08.png);
+}
+.hp_bg_09 {
+    background-image: url(../img/happyParking/HP09.jpg);
+}
+.hp_bg_10 {
+    background-image: url(../img/happyParking/HP10.jpg);
+}
+.hp_bg_11 {
+    background-image: url(../img/happyParking/HP11.jpg);
+}
