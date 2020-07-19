@@ -23,18 +23,20 @@ public class MemberService {
 
     //회원가입
     public void insertMembers(MemberDto memberDto) throws Exception {
-
         memberMapper.insertMembers(memberDto);
     }
 
+    //?
     public MemberDto getMember(String id, String password) throws Exception{
         return memberMapper.getMember(id,password);
     }
 
+    //아이디 중복체크
     public int checkId(LoginCheckDto loginCheckDto) {
         return memberMapper.checkId(loginCheckDto);
     }
 
+    //로그인
     public LoginDTO login(LoginDTO loginDTO) throws Exception{
         System.out.println("서비스 : 로그인" + memberMapper.login(loginDTO));
         return memberMapper.login(loginDTO);

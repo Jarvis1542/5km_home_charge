@@ -51,8 +51,8 @@ public class IndexController {
     @GetMapping({"/"})
     public String index(Model model, HttpSession httpSession) {
         httpSession.getAttribute("user");
-        System.out.println("현제 세션 정보 : " + httpSession.getAttribute("user"));
-        model.addAttribute("member",httpSession.getAttribute("user"));
+//        System.out.println("현제 세션 정보 : " + httpSession.getAttribute("user"));
+//        model.addAttribute("member",httpSession.getAttribute("user"));
         return "/index/index";
     }
 
