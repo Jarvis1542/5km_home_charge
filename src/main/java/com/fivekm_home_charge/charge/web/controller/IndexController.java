@@ -19,6 +19,12 @@ public class IndexController {
     @Autowired
     HappyParkingService happyParkingService;
 
+    // Bootstrap 템플릿 샘플 소스
+    @RequestMapping("sample/{itemid}")
+    public String templetSample(Model model, HttpSession httpSession, @PathVariable String itemid){
+        return "/templetSample/" + itemid;
+    }
+
     public IndexController() {
 //        list = new ArrayList<>();
 //        MemberDto m1 = new MemberDto("u1", "1111", "u1@naevr.com");
