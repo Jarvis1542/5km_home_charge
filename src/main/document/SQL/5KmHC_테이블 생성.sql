@@ -1,5 +1,4 @@
 /* 테이블 생성 */
-
 create table member(
     id varchar2(30),
     password  varchar2(30) not null,
@@ -48,6 +47,7 @@ create table CS(
     chargeType varchar2(50) NULL
 );
 
+/* 시퀀스 생성 */
 CREATE SEQUENCE  parking_seq
     MINVALUE 1
     nomaxvalue
@@ -57,10 +57,12 @@ CREATE SEQUENCE  parking_seq
     NOORDER
     NOCYCLE;
 
+/* 뷰 생성 */
 create view view_member
 as select * from member; /* member 뷰 작성*/
 
 create view view_parking
 as select * from parking; /* parking 뷰 작성*/
 
+/* 커밋 */
 commit;
