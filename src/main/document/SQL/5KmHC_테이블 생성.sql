@@ -1,5 +1,4 @@
 /* 테이블 생성 */
-
 create table member(
     id varchar2(30),
     password  varchar2(30) not null,
@@ -24,12 +23,12 @@ create table parking( /*주차장*/
     sample4_extraAddress varchar2(300), /*참고항목*/
     lat number null, /*위도*/
     lng number null, /*경도*/
-    dayTime varchar2(50), /*평일시간*/
-    weeTime varchar2(50), /*주말시간*/
-    holTime varchar2(50), /*공휴일시간*/
+    dayTime varchar2(30), /*평일시간*/
+    weeTime varchar2(30), /*주말시간*/
+    holTime varchar2(30), /*공휴일시간*/
     aptMap varchar2(1000) NULL, /*아파트단지지도-파일등록*/
     parkingPic varchar2(1000) NULL, /*주차장사진-파일등록*/
-    id varchar2(50) not null,
+    id varchar2(30) not null,
     parkingDate   date NULL, /*등록날짜*/
     constraint parking_parkingIdx_pk primary key(parkingIdx),
     constraint parking_id_fk foreign key(id) references member(id));
@@ -48,6 +47,7 @@ create table CS(
     chargeType varchar2(50) NULL
 );
 
+/* 시퀀스 생성 */
 CREATE SEQUENCE  parking_seq
     MINVALUE 1
     nomaxvalue
@@ -57,19 +57,12 @@ CREATE SEQUENCE  parking_seq
     NOORDER
     NOCYCLE;
 
+/* 뷰 생성 */
 create view view_member
 as select * from member; /* member 뷰 작성*/
 
 create view view_parking
 as select * from parking; /* parking 뷰 작성*/
 
+/* 커밋 */
 commit;
-
-drop table CS;
-drop table MEMBER;
-drop table PARKING;
-
-drop view VIEW_MEMBER;
-drop view VIEW_PARKING;
-
-drop sequence PARKING_SEQ;

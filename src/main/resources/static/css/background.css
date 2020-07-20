@@ -90,3 +90,20 @@
 .hp_bg_11 {
     background-image: url(../img/happyParking/HP11.jpg);
 }
+
+/* 소셜 로그인 버튼 공통 CSS */
+.socialLogin {
+    width: 100%;
+    height: 100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    margin-top:30px;
+}
+/* 구글 로그인 CSS */
+.googleLogin{
+    max-width: 238px;
+}
+/* 네이버 로그인 CSS */
+.naverLogin{
+    max-width: 240px;
+}
