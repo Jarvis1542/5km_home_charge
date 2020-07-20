@@ -18,11 +18,22 @@ public class HappyParkingController {
     HappyParkingService happyParkingService;
 
     @GetMapping("/happyParking")
-    public String happyParking() {
+    public String happyParking(HttpSession httpSession, Model model) {
+        model.addAttribute("member",httpSession.getAttribute("user"));
         return "/happyParking/happyParking";
     }
+
     //@GetMapping("/happyParking/{itemid}/")
-    @RequestMapping(value="/happyParking/{itemid}", method = RequestMethod.GET)
+
+    @GetMapping("/happyParking/happyParkingRegister")
+    public String happyParkingRegister(HttpServletRequest request, HttpServletResponse response,
+                                       Model model, HttpSession httpSession){
+        System.out.println("주차장등록현재세션아이디 : " +  httpSession.getAttribute("user"));
+        model.addAttribute("member",httpSession.getAttribute("user"));
+        return "/happyParking/happyParkingRegister";
+    }
+
+   /* @RequestMapping(value="/happyParking/{itemid}", method = RequestMethod.GET)
     public String main(HttpSession httpSession, @PathVariable String itemid,
                        HttpServletRequest request,
                        HttpServletResponse response, Model model) throws Exception {
@@ -30,14 +41,14 @@ public class HappyParkingController {
         System.out.println("itemid : " + itemid);
         if(itemid.equals("happyParkingRegister")) {
             HttpSession session = request.getSession();
-            System.out.println("주차장등록현재세션아이디 : " + httpSession.getAttribute("userId"));
-            model.addAttribute("user", session.getAttribute("userId"));
+            System.out.println("주차장등록현재세션아이디 : " + httpSession.getAttribute("user"));
+            model.addAttribute("member", session.getAttribute("user"));
         } else if(itemid.equals("happyParkingSearch")) {
             model.addAttribute("book1", happyParkingService.happyParkingBook1());
         }
 
         return "/happyParking/" + itemid;
-    }
+    }*/
 
     @GetMapping("/happyParking/requestHappyParking/{parkingName}")
     public String requestHappyParking(@PathVariable String parkingName, HttpSession httpSession, Model model) throws Exception{
@@ -50,7 +61,7 @@ public class HappyParkingController {
     public String happyParkingRegister(HttpServletRequest request, HttpServletResponse response,
                                        Model model){
         HttpSession session = request.getSession();
-        System.out.println("주차장등록현재세션아이디 : " +  session.getAttribute("userId"));
+        System.out  .println("주차장등록현재세션아이디 : " +  session.getAttribute("userId"));
         model.addAttribute("user", session.getAttribute("userId"));
         return "/happyParking/happyParkingRegister";
     }

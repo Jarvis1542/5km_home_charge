@@ -14,7 +14,8 @@ import javax.servlet.http.HttpSession;
 public class AdminController {
     @Autowired
     private MemberService memberService;
-    HappyParkingService happyParkingService;
+    @Autowired
+    private HappyParkingService happyParkingService;
 
     @GetMapping("/admin/chargingRequest")
     public String chargingRequest(Model model, HttpSession httpSession){

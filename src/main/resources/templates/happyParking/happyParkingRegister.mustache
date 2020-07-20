@@ -27,15 +27,15 @@
                 }
 
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                document.getElementById('postcode').value = data.zonecode;
-                document.getElementById("roadAddress").value = roadAddr;
-                document.getElementById("jibunAddress").value = data.jibunAddress;
+                document.getElementById('sample4_postcode').value = data.zonecode;
+                document.getElementById("sample4_roadAddress").value = roadAddr;
+                document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
 
                 // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
                 if(roadAddr !== ''){
-                    document.getElementById("extraAddress").value = extraRoadAddr;
+                    document.getElementById("sample4_extraAddress").value = extraRoadAddr;
                 } else {
-                    document.getElementById("extraAddress").value = '';
+                    document.getElementById("sample4_extraAddress").value = '';
                 }
 
                 var guideTextBox = document.getElementById("guide");
@@ -71,13 +71,13 @@
         </div>
     </div>
     <!--/ bradcam_area  -->
-    
+
     <!-- apply_form_area -->
     <div class="apply_form_area">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <form action="#" class="apply_form">
+                    <form action="/rest/happyParkingRegister" method="post" class="apply_form">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="apply_info_text text-center">
@@ -86,8 +86,11 @@
                                     <p>공간과 주차장을 등록한 후 수입을 만들어보세요.</p>
                             </div>
                             <div class="col-md-12">
+                                <div class="form-group">
                                 <div class="single_field">
-                                    <input type="text" placeholder="주차장명">
+                                    <h3>주차장 이름</h3>
+                                    <input type="text" id="parkingName" name="parkingName" placeholder="주차장명">
+                                </div>
                                 </div>
                             </div>
                                 <div class="col-md-12">
@@ -96,76 +99,100 @@
                                         <p>주차장 타입 &ensp; &ensp; &ensp; &ensp;</p>
 
                                         <span>단독 주택</span>
+                                        <div class="form-group">
                                         <div class="primary-checkbox">
-                                            <input type="checkbox" id="default-checkbox-1" name="chargeType" value="단독 주택">
+                                            <input type="radio" id="default-checkbox-1" name="parkingType" value="단독 주택">
                                             <label for="default-checkbox-1"></label>
+                                        </div>
                                         </div>
                                         &ensp; &ensp;
                                         <span>개인사유지</span>
+                                        <div class="form-group">
                                         <div class="primary-checkbox">
-                                            <input type="checkbox" id="default-checkbox-2" name="chargeType" value="개인사유지">
+                                            <input type="radio" id="default-checkbox-2" name="parkingType" value="개인 사유지">
                                             <label for="default-checkbox-2"></label>
+                                        </div>
                                         </div> &ensp; &ensp;
                                         <span>공동 주택</span>
+                                        <div class="form-group">
                                         <div class="primary-checkbox">
-                                            <input type="checkbox" id="default-checkbox-3" name="chargeType" value="공동 주택">
+                                            <input type="radio" id="default-checkbox-3" name="parkingType" value="공동 주택">
                                             <label for="default-checkbox-3"></label>
+                                        </div>
                                         </div> &ensp; &ensp;
                                         <span>기타</span>
+                                        <div class="form-group">
                                         <div class="primary-checkbox">
-                                            <input type="checkbox" id="default-checkbox-4" name="chargeType" value="기타">
+                                            <input type="radio" id="default-checkbox-4" name="parkingType" value="기타">
                                             <label for="default-checkbox-4"></label>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
+
+                                <!-- 요금 및 주차자리 -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="single_field">
+                                            <input type="text" id="min30Fee" name="min30Fee" placeholder="기본요금 30분당   ex) 800원">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="single_field">
+                                            <input type="text" id="addMin10Fee" name="addmin10Fee" placeholder="추가요금 10분당    ex) 300원">
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="col-md-12">
+                                <div class="form-group">
                                 <div class="single_field">
-                                    <input type="text" placeholder="주차 공간 수    ex) 20대">
+                                    <input type="text" id="place" name="place" placeholder="주차 공간 수    ex) 20대">
+                                </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <div class="single_field">
-                                    <input type="text" placeholder="기본요금 30분당    ex) 800원">
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="single_field">
-                                    <input type="text" placeholder="추가요금 10분당    ex) 300원">
-                                </div>
-                            </div>
-                             <div class="col-md-12">
-                                 <div class="single_field">
-                                     <input type="text" placeholder="운영시간    ex) 12:00 ~ 16:00">
-                                 </div>
-                             </div>
+
+                                <!-- 도로명 주소 -->
                                 <div class="col-xl-6 col-md-6 col-lg-4 field_col_margin">
                                     <h3>주소</h3>
-                                    <form action="#" class="newsletter_form">
-                                        <input type="text" name="postcode" id="postcode" placeholder="우편번호" value="" class="single-input" />
+                                    <div class="form-group">
+                                        <input type="text" name="sample4_postcode" id="sample4_postcode" placeholder="우편번호" value="" class="single-input" />
                                         <button type="button" onclick="sample4_execDaumPostcode()" class="genric-btn default-border">주소 검색</button>
-                                        <input type="text" name="roadAddress" id="roadAddress" placeholder="도로명주소" value="" class="single-input" />
-                                        <input type="text" name="jibunAddress" id="jibunAddress" placeholder="지번주소" value="" class="single-input" />
-                                        <input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소" value="" class="single-input" />
-                                        <input type="text" name="extraAddress" id="extraAddress" placeholder="참고항목" value="" class="single-input" />
-                                    </form>
+                                        <input type="text" name="sample4_roadAddress" id="sample4_roadAddress" placeholder="도로명주소" value="" class="single-input" />
+                                        <input type="text" name="sample4_jibunAddress" id="sample4_jibunAddress" placeholder="지번주소" value="" class="single-input" />
+                                        <input type="text" name="sample4_detailAddress" id="sample4_detailAddress" placeholder="상세주소" value="" class="single-input" />
+                                        <input type="text" name="sample4_extraAddress" id="sample4_extraAddress" placeholder="참고항목" value="" class="single-input" />
+                                    </div>
                                     <p class="newsletter_text">주소를 검색하여 주소를 등록해주세요.</p>
                                 </div>
 
+                             <div class="col-md-12">
+                                 <div class="form-group">
+                                 <div class="single_field">
+                                     <input type="text" id="dayTime"  id="dayTime" placeholder="운영시간    ex) 12:00 ~ 16:00">
+                                     <input type="text" id="weeTime"  id="weeTime" placeholder="주말시간    ex) 12:00 ~ 16:00">
+                                     <input type="text" id="holTime"  id="holTime" placeholder="공휴일시간  ex) 12:00 ~ 16:00">
+                                 </div>
+                                 </div>
+                             </div>
+
                                 <div class="col-xl-6 col-md-6 col-lg-4 field_col_margin">
                                     <h3>사진 등록</h3>
-                                    <form action="#" class="newsletter_form">
+                                    <div class="form-group">
                                         <label for="image1">충전소 사진 업로드1</label>
                                         <input type="file" name="file1" id="image1" accept="image/*" class="single-input" />
                                         <label for="image2">충전소 사진 업로드2</label>
                                         <input type="file" name="file2" id="image2" accept="image/*" class="single-input" />
                                         <button type="upload" class="genric-btn default-border">사진 등록</button>
-                                    </form>
+                                    </div>
                                     <p class="newsletter_text">충전소 사진을 등록해주세요.</p>
                                 </div>
                              <div class="col-md-12">
+                                 <input type="hidden" id="id" value="{{member.id}}" name="id">
                                  <div class="submit_btn">
-                                     <button class="boxed-btn3" type="submit">등록</button>
+                                     <button class="boxed-btn3" type="submit" id="parkingRegBtn">등록</button>
                                  </div>
                              </div>
                             </div>
@@ -195,7 +222,7 @@
                             01
                         </span>
                         <h3>Apply for loan</h3>
-                        <p>We will customize a loan based on the 
+                        <p>We will customize a loan based on the
                             amount of cash your company need term</p>
                     </div>
                 </div>
@@ -205,7 +232,7 @@
                             02
                         </span>
                         <h3>Application review</h3>
-                        <p>We will customize a loan based on the 
+                        <p>We will customize a loan based on the
                             amount of cash your company need term</p>
                     </div>
                 </div>
@@ -215,7 +242,7 @@
                             03
                         </span>
                         <h3>Get funding fast</h3>
-                        <p>We will customize a loan based on the 
+                        <p>We will customize a loan based on the
                             amount of cash your company need term</p>
                     </div>
                 </div>
