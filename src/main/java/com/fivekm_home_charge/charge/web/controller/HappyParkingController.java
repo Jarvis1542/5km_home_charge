@@ -33,6 +33,26 @@ public class HappyParkingController {
         return "/happyParking/happyParkingRegister";
     }
 
+    @GetMapping("/happyParking/happyParkingSearch")
+    public String happyParkingSearch(Model model, HttpSession httpSession) throws Exception{
+        model.addAttribute("user", httpSession.getAttribute("userId"));
+        model.addAttribute("parking", happyParkingService.happyParkingSearch());
+        return "/happyParking/happyParkingSearch";
+    }
+
+    @GetMapping("/happyParking/happyParkingSearch1")
+    public String happyParkingSearch2(Model model) throws Exception{
+        model.addAttribute("parking", happyParkingService.happyParkingSearch());
+        return "/happyParking/happyParkingSearch2";
+    }
+
+
+    @GetMapping("/happyParking/happyParkingHistory")
+    public String happyParkingHistory(){
+        return "/happyParking/happyParkingHistory";
+    }
+
+
    /* @RequestMapping(value="/happyParking/{itemid}", method = RequestMethod.GET)
     public String main(HttpSession httpSession, @PathVariable String itemid,
                        HttpServletRequest request,
