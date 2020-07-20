@@ -1,10 +1,7 @@
 package com.fivekm_home_charge.charge.service;
 
 import com.fivekm_home_charge.charge.mapper.HappyParkingMapper;
-import com.fivekm_home_charge.charge.web.dto.HappyParkingBookDto1;
-import com.fivekm_home_charge.charge.web.dto.HappyParkingDto;
-import com.fivekm_home_charge.charge.web.dto.HappyParkingRequestLDto;
-import com.fivekm_home_charge.charge.web.dto.HappyParkingRequestListDto;
+import com.fivekm_home_charge.charge.web.dto.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +26,22 @@ public class HappyParkingService {
 
     public HappyParkingBookDto1 happyParkingBook1() throws Exception{
         return happyParkingMapper.happyParkingBook1();
+    }
+
+    public void updateLatLng(LatLngDto latLngDto) throws Exception{
+        happyParkingMapper.updateLatLng(latLngDto);
+    }
+
+    public void upadteComplete(HappyParkingDto happyParkingDto) throws Exception{
+        happyParkingMapper.upadteComplete(happyParkingDto);
+    }
+
+    public ArrayList<HappyParkingSearchDto> happyParkingSearch() throws Exception{
+        return happyParkingMapper.happyParkingSearch();
+    }
+
+    public HappyParkingSearchDto selectParkingName(String parkingName) throws Exception{
+        System.out.println("서비스 : " + parkingName);
+        return happyParkingMapper.selectParkingName(parkingName);
     }
 }

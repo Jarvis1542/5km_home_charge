@@ -6,21 +6,21 @@ import java.util.Date;
 
 @Data
 public class HappyParkingDto {
-    private final String parkingName;
-    private final String parkingType;
-    private final int min30Fee;
-    private final int addMin10Fee;
-    private final int place;
-    private final String sample4_postcode;
-    private final String sample4_roadAddress;
-    private final String sample4_jibunAddress;
-    private final String sample4_detailAddress;
-    private final String sample4_extraAddress;
-    private final String dayTime;
-    private final String weeTime;
-    private final String holTime;
-    private final String aptMap;
-    private final String parkingPic;
-    private final String id;
-    private final Date parkingDate;
+    private String parkingName;
+    private String parkingType;
+    private int min30Fee;
+    private int addMin10Fee;
+    private int place;
+    private String sample4_postcode;
+    private String sample4_roadAddress;
+    private String sample4_jibunAddress;
+    private String sample4_detailAddress;
+    private String sample4_extraAddress;
+    private String dayTime;
+    private String weeTime;
+    private String holTime;
+    private String aptMap;
+    private String parkingPic;
+    private String id;
+    private Date parkingDate;
 }
