@@ -5,14 +5,20 @@ $('.carousel').carousel({
 });
 
 // Raido 버튼 값에 따라 내용 표시(memberEdit)
-function memType() {
-    var check_Box = document.getElementsByName("memberType"); //체크박스 name
-    var disign = document.getElementById([j+1]); // 보여질내용
+$('input[type=radio][name=memberType]').on('click', function() {
+    var chkValue = $('input[type=radio][name=memberType]:checked').val();
 
-    if(check_Box[j].checked == true ){
-        disign.style.display = "block";
-    }else{
-        check_Box[j].checked = false;
-        disign.style.display = "none";
+    if (chkValue == 'typeNormal') {
+        $('#securityForm').css('display', 'none');
+        $('#adminForm').css('display', 'none');
+        // return false;
+    } else if (chkValue == 'typeSecurity') {
+        $('#securityForm').css('display', 'block');
+        $('#adminForm').css('display', 'none');
+        // return false;
+    } else if (chkValue == 'typeAdmin') {
+        $('#securityForm').css('display', 'none');
+        $('#adminForm').css('display', 'block');
+        // return false;
     }
-}
+});

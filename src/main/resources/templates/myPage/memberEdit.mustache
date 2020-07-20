@@ -79,7 +79,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <form action="#" class="apply_form">
+                <div class="apply_form">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="apply_info_text text-center">
@@ -142,34 +142,40 @@
                         <div class="col-md-12">
                             <div class="center" style="display: block;">
                                 <label class="interval">
-                                    <input type="radio" id="typeNormal" name="memberType" value="" onClick="memType()" checked>
+                                    <input type="radio" name="memberType" value="typeNormal">
                                     일반 회원
                                 </label> <label class="interval">
-                                    <input type="radio" id="typeSecurity" name="memberType" value="" onClick="memType()">
+                                    <input type="radio" name="memberType" value="typeSecurity">
                                     경비 회원
                                 </label> <label class="interval">
-                                    <input type="radio" id="typeAdmin" name="memberType" value="" onClick="memType()">
+                                    <input type="radio" name="memberType" value="typeAdmin">
                                     관리자 회원
                                 </label>
                             </div>
                         </div>
 
+                        <div id="securityForm" style="display: none;">
+                            <div class="col-md-12">
+                                <div class="single_field">
+                                    <input type="text" placeholder="관리업체 이름">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="single_field">
+                                    <input type="text" placeholder="관리업체 번호">
+                                </div>
+                            </div>
+                        </div>
 
-                        <div id="x1">항목01번을선택하였습니다</div>
-                        <div id="x2">항목02번을선택하였습니다</div>
-                        <div id="x3">항목03번을선택하였습니다</div>
-
-
-
-
+                        <div id="adminForm" style="display: none;"><p>POP2의 영역이 보임</p></div>
 
                         <div class="col-md-12">
                             <div class="submit_btn">
-                                <button class="boxed-btn3" type="submit">확인</button>
+                                <button class="boxed-btn3">확인</button>
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
