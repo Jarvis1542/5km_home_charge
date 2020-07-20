@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-xl-12">
                 <div class="bradcam_text">
-                    <h3>정보 수정</h3>
+                    <h3>회원정보 수정</h3>
                 </div>
             </div>
         </div>
@@ -138,11 +138,29 @@
                             </div>
                         </div>
 
-
-                        <div>
-                            <input type="checkbox" name="memberType" value="1"> CH
-                            <input type="checkbox" name="memberType" value="2"> A
+                        <!-- 회원구분 선택 -->
+                        <div class="col-md-12">
+                            <div class="center" style="display: block;">
+                                <label class="interval">
+                                    <input type="radio" id="typeNormal" name="memberType" value="" onClick="memType()" checked>
+                                    일반 회원
+                                </label> <label class="interval">
+                                    <input type="radio" id="typeSecurity" name="memberType" value="" onClick="memType()">
+                                    경비 회원
+                                </label> <label class="interval">
+                                    <input type="radio" id="typeAdmin" name="memberType" value="" onClick="memType()">
+                                    관리자 회원
+                                </label>
+                            </div>
                         </div>
+
+
+                        <div id="x1">항목01번을선택하였습니다</div>
+                        <div id="x2">항목02번을선택하였습니다</div>
+                        <div id="x3">항목03번을선택하였습니다</div>
+
+
+
 
 
                         <div class="col-md-12">

@@ -126,6 +126,12 @@
     text-align: center;
 }
 
+/* 간격 두기 */
+.interval{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 
 /* -- //content -- */
 
